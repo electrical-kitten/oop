@@ -7,7 +7,7 @@ from selenium import webdriver
 def driver():
     options = webdriver.ChromeOptions()
     options.add_experimental_option("excludeSwitches", ["enable-logging"])
-    options.add_argument("--headless=new")
+    # options.add_argument("--headless=new")
     driver = webdriver.Chrome(options=options)
     driver.get('https://multishik.cynteka.ru')
     driver.implicitly_wait(5)
