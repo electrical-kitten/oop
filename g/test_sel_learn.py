@@ -102,6 +102,7 @@ def test_person_project_filter(driver, user_info):
     apply_btn = driver.find_element(
         By.XPATH, '//button[@class="l primary ng-star-inserted"]')
     apply_btn.click()
+    time.sleep(2)
 
 
 @pytest.mark.garbage
