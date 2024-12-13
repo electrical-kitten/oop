@@ -1,12 +1,12 @@
 from selenium import webdriver
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 import pytest
 import time
 
 test_info = ['Банный комплекс', 'мурино', 'Гражданка']
-
 # @pytest.mark.parametrize()
-
 
 def test_person_phone_filter(driver, user_info):
     login_input = driver.find_element(
@@ -32,8 +32,7 @@ def test_person_phone_filter(driver, user_info):
         By. XPATH, '//input[@testid="phone"]')
     time.sleep(1)
     filter_phone_input.send_keys(user_info['users'][0]['user_login'])
-
-    # time.sleep(2)
+ 
     apply_btn = driver.find_element(
         By.XPATH, '//button[@class="m primary ng-star-inserted"] ')
     apply_btn.click()
