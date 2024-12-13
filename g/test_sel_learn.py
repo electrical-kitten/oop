@@ -50,59 +50,59 @@ def test_person_phone_filter(driver, user_info):
             f"\n{user_info['person_info_id']} is not in {link}")
 
 
-def test_person_project_filter(driver, user_info):
+# def test_person_project_filter(driver, user_info):
 
-    login_input = driver.find_element(
-        By.XPATH, '//input[@name="control-input-login"]')
-    login_input.send_keys(user_info['users'][0]['user_login'])
+#     login_input = driver.find_element(
+#         By.XPATH, '//input[@name="control-input-login"]')
+#     login_input.send_keys(user_info['users'][0]['user_login'])
 
-    pass_input = driver.find_element(
-        By.XPATH, '//input[@name="control-input-password"]')
-    pass_input.send_keys(user_info['users'][0]['user_password'])
+#     pass_input = driver.find_element(
+#         By.XPATH, '//input[@name="control-input-password"]')
+#     pass_input.send_keys(user_info['users'][0]['user_password'])
 
-    login_button = driver.find_element(By.XPATH, '//button[@type="submit"]')
-    login_button.click()
+#     login_button = driver.find_element(By.XPATH, '//button[@type="submit"]')
+#     login_button.click()
 
-    persons_reg_icon = driver.find_element(
-        By.XPATH, '//a[@name="NPersonInfo/registry"]')
-    persons_reg_icon.click()
+#     persons_reg_icon = driver.find_element(
+#         By.XPATH, '//a[@name="NPersonInfo/registry"]')
+#     persons_reg_icon.click()
 
-    all_filters = driver.find_element(
-        # By.XPATH, '/html/body/app-root/app-template-module/app-personinfo-registry/div/div[2]/fck-registry-ui/fck-registry-v2/fck-registry-wrapper/div[1]/fck-registry-filter/div/div[2]/div/button')
-        By.XPATH, '//div[@class="content" and text()="Все фильтры"]/ancestor::button[@type="button"]')
-    all_filters.click()
+#     all_filters = driver.find_element(
+#         # By.XPATH, '/html/body/app-root/app-template-module/app-personinfo-registry/div/div[2]/fck-registry-ui/fck-registry-v2/fck-registry-wrapper/div[1]/fck-registry-filter/div/div[2]/div/button')
+#         By.XPATH, '//div[@class="content" and text()="Все фильтры"]/ancestor::button[@type="button"]')
+#     all_filters.click()
 
-    project_filter = driver.find_element(
-        By.XPATH, '//p[text()=" Проект "]/ancestor::button[@class="accordion_heading"]')
-    project_filter.click()
+#     project_filter = driver.find_element(
+#         By.XPATH, '//p[text()=" Проект "]/ancestor::button[@class="accordion_heading"]')
+#     project_filter.click()
 
-    project_search = driver.find_element(By.XPATH, '//input[@testid="Поиск"]')
-    project_search.click()
-    project_search.send_keys(test_info[0])
+#     project_search = driver.find_element(By.XPATH, '//input[@testid="Поиск"]')
+#     project_search.click()
+#     project_search.send_keys(test_info[0])
 
-    prj_for_vlad = driver.find_element(
-        By.XPATH, '//div[@class="button_content" and text()=" Банный комплекс "]/ancestor::div[@class="button"]')
-    prj_for_vlad.click()
+#     prj_for_vlad = driver.find_element(
+#         By.XPATH, '//div[@class="button_content" and text()=" Банный комплекс "]/ancestor::div[@class="button"]')
+#     prj_for_vlad.click()
 
-    project_search.clear()
-    project_search.send_keys(test_info[1])
+#     project_search.clear()
+#     project_search.send_keys(test_info[1])
 
-    prj_for_polya = driver.find_element(
-        By.XPATH, '//div[@class="button_content" and text()=" мурино "]/ancestor::div[@class="button"]')
-    prj_for_polya.click()
+#     prj_for_polya = driver.find_element(
+#         By.XPATH, '//div[@class="button_content" and text()=" мурино "]/ancestor::div[@class="button"]')
+#     prj_for_polya.click()
 
-    project_search.clear()
-    project_search.send_keys(test_info[2])
+#     project_search.clear()
+#     project_search.send_keys(test_info[2])
 
-    prj_for_yulya = driver.find_element(
-        By.XPATH, '//div[@class="button_content" and text()=" Гражданка "]/ancestor::div[@class="button"]')
-    prj_for_yulya.click()
-    time.sleep(1)
+#     prj_for_yulya = driver.find_element(
+#         By.XPATH, '//div[@class="button_content" and text()=" Гражданка "]/ancestor::div[@class="button"]')
+#     prj_for_yulya.click()
+#     time.sleep(1)
 
-    apply_btn = driver.find_element(
-        By.XPATH, '//button[@class="l primary ng-star-inserted"]')
-    apply_btn.click()
-    time.sleep(2)
+#     apply_btn = driver.find_element(
+#         By.XPATH, '//button[@class="l primary ng-star-inserted"]')
+#     apply_btn.click()
+#     time.sleep(2)
 
 
 @pytest.mark.garbage

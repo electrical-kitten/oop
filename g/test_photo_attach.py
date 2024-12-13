@@ -23,7 +23,7 @@ def test_attach_photo(driver, user_info):
     create_goods = driver.find_element(By.XPATH, '/html/body/app-root/app-template-module/header/div/div/div/div/div[1]/button[1]')
     create_goods.click()
 
-    time.sleep(3)
+    # time.sleep(3)
 
     # attach_photo = driver.find_element(By.XPATH, '//upload-photo[@class="ng-star-inserted"]')
     # attach_photo.click()
@@ -33,13 +33,14 @@ def test_attach_photo(driver, user_info):
     # # time.sleep(3)
     # pyautogui.press('enter')
 
-    # time.sleep(2)
+    time.sleep(2)
 
     goods_name_input = driver.find_element(By.XPATH, '//textarea[@id="mat-input-23"]')
     goods_name_input = driver.find_element(By.XPATH, '/html/body/app-root/app-template-module/app-goods-editor/div/div/div[1]/field-render-module/div/controls-render/div/div/div[2]/control-string/field-template/div/div[2]/div/textarea')
     goods_name_input.click()
     goods_name_input.send_keys('attach photo autotest')
 
+    time.sleep(2)
     goods_category_btn = driver.find_element(By.XPATH, '/html/body/app-root/app-template-module/app-goods-editor/div/div/div[1]/field-render-module/div/controls-render/div/div/div[5]/select-category-control/field-template/div/div[2]/button')
     goods_category_btn.click()
 

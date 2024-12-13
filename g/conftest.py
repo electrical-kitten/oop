@@ -13,6 +13,7 @@ def driver():
     driver.implicitly_wait(5)
     driver.maximize_window()
     yield driver
+    
 
 
 @pytest.fixture(scope='session')
