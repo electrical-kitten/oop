@@ -9,6 +9,7 @@ test_info = ['Банный комплекс', 'мурино', 'Гражданк�
 # @pytest.mark.parametrize()
 
 def test_person_phone_filter(driver, user_info):
+    wait = WebDriverWait(driver, timeout=5)
     login_input = driver.find_element(
         By.XPATH, '//input[@name="control-input-login"]')
     login_input.send_keys(user_info['users'][0]['user_login'])
